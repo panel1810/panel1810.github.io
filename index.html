@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="Author.jpg" alt="Alice's Profile Photo" class="profile-photo">
+            <h1>Alice</h1>
+        </div>
+        <nav>
+            <button class="btn home-btn" onclick="showSection('home')">Home</button>
+            <button class="btn about-btn" onclick="showSection('about')">About</button>
+            <button class="btn skills-btn" onclick="showSection('skills')">Skills</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="section">
+            <h2>Welcome!</h2>
+            <p>Alice's story about anime fanart goes here. A creative space to share art and inspiration!</p>
+        </section>
+        
+        <section id="about" class="section hidden">
+            <h2>About Me</h2>
+            <p>Hi, I'm Alice, an anime enthusiast and a passionate coder. Let's connect!</p>
+            <button class="btn whatsapp-btn">Contact: +7 978 981-97-44</button>
+            <button class="btn email-btn">Email: lou.nebulis.ix.aliceliese@proton.me</button>
+        </section>
+        
+        <section id="skills" class="section hidden">
+            <h2>My Skills</h2>
+            <div class="skill">
+                <p>HTML: <span class="percentage">90%</span></p>
+                <div class="progress-bar yellow" style="width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <p>CSS: <span class="percentage">80%</span></p>
+                <div class="progress-bar green" style="width: 80%;"></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript: <span class="percentage">70%</span></p>
+                <div class="progress-bar blue" style="width: 70%;"></div>
+            </div>
+            <div class="skill">
+                <p>Python: <span class="percentage">75%</span></p>
+                <div class="progress-bar red" style="width: 75%;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Alice's Portfolio</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
