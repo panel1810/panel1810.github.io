@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Alice's Portfolio</h1>
+            <img src="Author.jpg" alt="Alice's Profile Picture" class="profile-pic">
+        </header>
+        <section class="introduction">
+            <h2>About Me</h2>
+            <p id="typing-text"></p>
+        </section>
+        <section class="skills">
+            <h2>My Skills</h2>
+            <div class="skill">
+                <label for="python">Python</label>
+                <div class="progress-bar" id="python-bar"></div>
+                <span id="python-percentage">0%</span>
+            </div>
+            <div class="skill">
+                <label for="javascript">JavaScript</label>
+                <div class="progress-bar" id="javascript-bar"></div>
+                <span id="javascript-percentage">0%</span>
+            </div>
+            <div class="skill">
+                <label for="css">CSS</label>
+                <div class="progress-bar" id="css-bar"></div>
+                <span id="css-percentage">0%</span>
+            </div>
+            <button id="story-button">Short Story About My Skills</button>
+            <button id="whatsapp-button">Contact Me on WhatsApp</button>
+            <button id="email-button">Email Me</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
