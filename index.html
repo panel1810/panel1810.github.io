@@ -82,6 +82,12 @@
             filter: brightness(1.2);
         }
 
+        .theme-toggle {
+            margin-left: auto;
+            background: #333;
+            color: #fff;
+        }
+
         section {
             padding: 50px 20px;
             text-align: center;
@@ -205,6 +211,7 @@
 </head>
 
 <body>
+   <body>
     <header>
         <h1>Welcome to Alice's Portfolio</h1>
         <img src="Author.jpg" alt="Alice's Profile Photo">
@@ -215,6 +222,7 @@
         <button class="white" onclick="navigateTo('home')">Home</button>
         <button class="blue" onclick="navigateTo('about')">About</button>
         <button class="red" onclick="navigateTo('skills')">Skills</button>
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     </nav>
 
     <section id="home">
@@ -232,7 +240,7 @@
         <h2>About Me</h2>
         <p>I’m Alice, a creative developer and anime enthusiast, merging technology with art. Reach out to me!</p>
         <div class="contact-buttons">
-            <button class="whatsapp" onclick="location.href='https://wa.me/79789819744'">WhatsApp: +7 978 981-97-44</button>
+            <button class="whatsapp" onclick="location.href='https://wa.me/79789819744'">WhatsApp Me</button>
             <button class="email" onclick="location.href='mailto:lou.nebulis.ix.aliceliese@proton.me'">Email Me</button>
         </div>
     </section>
@@ -276,6 +284,7 @@
     </footer>
 
     <script>
+        // Smooth Navigation
         function navigateTo(sectionId) {
             document.querySelectorAll('section').forEach(section => {
                 section.style.display = section.id === sectionId ? 'block' : 'none';
@@ -288,7 +297,29 @@
                 });
             }
         }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                body.style.background = '#1c1c1c';
+                body.style.color = '#f5f5f5';
+            } else {
+                body.style.background = 'linear-gradient(135deg, #0a0f1a, #2e3b7f)';
+                body.style.color = '#f5f5f5';
+            }
+        }
+
+        // Lazy Animation for Sections
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    section.style.opacity = 1;
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
