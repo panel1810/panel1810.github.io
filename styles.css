@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.introduction {
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background: #76c7c0;
+    width: 0;
+    transition: width 2s;
+}
+
+.contact button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #76c7c0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #5ba8a0;
+}
