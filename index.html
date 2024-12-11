@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button.white {
+            background-color: white;
+            color: #333;
+        }
+
+        nav button.blue {
+            background-color: #007bff;
+            color: white;
+        }
+
+        nav button.red {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill {
+            margin: 15px 0;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-bar {
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 5px;
+        }
+
+        .skill-bar div {
+            height: 100%;
+        }
+
+        .yellow {
+            background-color: yellow;
+            width: 90%;
+        }
+
+        .green {
+            background-color: green;
+            width: 80%;
+        }
+
+        .blue {
+            background-color: blue;
+            width: 70%;
+        }
+
+        .red {
+            background-color: red;
+            width: 75%;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: white;
+        }
+
+        .contact-buttons button {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .whatsapp {
+            background-color: green;
+            color: white;
+        }
+
+        .email {
+            background-color: black;
+            color: white;
+        }
+
+        .cool-theme {
+            background-color: #282c34;
+            color: #61dafb;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        .anime-story {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Alice's Portfolio</h1>
+        <img src="Author.jpg" alt="Alice's Profile Photo" style="border-radius: 50%; width: 150px; height: 150px;">
+        <p>Hello, I'm Alice! A passionate developer and anime fan.</p>
+    </header>
+
+    <nav>
+        <button class="white" onclick="navigateTo('home')">Home</button>
+        <button class="blue" onclick="navigateTo('about')">About</button>
+        <button class="red" onclick="navigateTo('skills')">Skills</button>
+    </nav>
+
+    <section id="home">
+        <h2>Story</h2>
+        <p class="anime-story">As an anime fan, I draw inspiration from anime fanart. It reflects creativity, vibrant colors, and unique emotions!</p>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>About Me</h2>
+        <div class="cool-theme">
+            <p>I’m a developer passionate about technology and storytelling through anime themes.</p>
+            <div class="contact-buttons">
+                <button class="whatsapp" onclick="location.href='https://wa.me/79789819744'">WhatsApp: +7 978 981-97-44</button>
+                <button class="email" onclick="location.href='mailto:lou.nebulis.ix.aliceliese@proton.me'">Email Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="display: none;">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-label">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="yellow"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>CSS</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar"><div class="green"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>JavaScript</span>
+                    <span>70%</span>
+                </div>
+                <div class="skill-bar"><div class="blue"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Python</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar"><div class="red"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact me on WhatsApp or Email for more information!</p>
+    </footer>
+
+    <script>
+        function navigateTo(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
