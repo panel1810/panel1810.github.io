@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });
 
+let currentIndex = 0;
+
+function moveLeft() {
+    const images = document.querySelectorAll(".portfolio-image");
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updatePortfolio(images);
+}
+
+function moveRight() {
+    const images = document.querySelectorAll(".portfolio-image");
+    currentIndex = (currentIndex + 1) % images.length;
+    updatePortfolio(images);
+}
+
+function updatePortfolio(images) {
+    images.forEach((image, index) => {
+        const offset = (index - currentIndex) * 100;
+        image.style.transform = `translateX(${offset}%)`;
+    });
+}
+
 function navigateTo(section) {
     document.querySelectorAll("main").forEach(main => main.classList.add("hidden"));
     document.getElementById(section).classList.remove("hidden");
