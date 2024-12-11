@@ -1,0 +1,91 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.red-btn {
+    background: #ff4d4d;
+    color: white;
+}
+
+.blue-btn {
+    background: #4d79ff;
+    color: white;
+}
+
+.green-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.black-btn {
+    background: black;
+    color: white;
+}
+
+/* Displays */
+.hidden {
+    display: none;
+}
+
+/* Progress Bars */
+.skill {
+    margin: 20px 0;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.progress {
+    height: 20px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress::after {
+    content: '';
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background: #333;
+    color: white;
+    padding: 10px;
+}
