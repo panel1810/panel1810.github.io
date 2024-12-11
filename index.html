@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alice</h1>
+            <img src="Author.jpg" alt="Alice's Profile Picture" class="profile-pic">
+        </header>
+        <section class="introduction">
+            <h2>About Me</h2>
+            <p id="typing-text"></p>
+        </section>
+        <section class="skills">
+            <h2>My Skills</h2>
+            <div class="skill">
+                <label>Python</label>
+                <div class="progress-bar">
+                    <div class="progress" id="python-progress"></div>
+                </div>
+                <span id="python-percentage">0%</span>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="progress-bar">
+                    <div class="progress" id="javascript-progress"></div>
+                </div>
+                <span id="javascript-percentage">0%</span>
+            </div>
+            <div class="skill">
+                <label>CSS</label>
+                <div class="progress-bar">
+                    <div class="progress" id="css-progress"></div>
+                </div>
+                <span id="css-percentage">0%</span>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <button onclick="window.open('https://wa.me/79789819744')">WhatsApp</button>
+            <button onclick="window.location.href='mailto:lou.nebulis.ix.aliceliese@proton.me'">Email</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
