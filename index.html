@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0f1a, #2e3b7f);
+            color: #f5f5f5;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #4b0082, #8b00ff);
+            color: white;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 2s ease;
+        }
+
+        header img {
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 150px;
+            height: 150px;
+            margin: 20px 0;
+            animation: scaleUp 1.5s ease;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        nav button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav button.white {
+            background: #ffffff;
+            color: #333;
+        }
+
+        nav button.blue {
+            background: #2563eb;
+            color: white;
+        }
+
+        nav button.red {
+            background: #dc2626;
+            color: white;
+        }
+
+        nav button:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .story-images img {
+            max-width: 800px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .story-images img:hover {
+            transform: scale(1.05);
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill {
+            margin: 20px 0;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 25px;
+            overflow: hidden;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .skill-bar div {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            transition: width 2s ease;
+        }
+
+        .yellow {
+            background-color: #facc15;
+        }
+
+        .green {
+            background-color: #10b981;
+        }
+
+        .blue {
+            background-color: #3b82f6;
+        }
+
+        .red {
+            background-color: #ef4444;
+        }
+
+        footer {
+            padding: 20px;
+            background: #2e3b7f;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .footer-glow {
+            text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .contact-buttons button {
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .contact-buttons button:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .email {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Alice's Portfolio</h1>
+        <img src="Author.jpg" alt="Alice's Profile Photo">
+        <p>Hello, I'm Alice! A passionate developer and anime fan.</p>
+    </header>
+
+    <nav>
+        <button class="white" onclick="navigateTo('home')">Home</button>
+        <button class="blue" onclick="navigateTo('about')">About</button>
+        <button class="red" onclick="navigateTo('skills')">Skills</button>
+    </nav>
+
+    <section id="home">
+        <h2>Story</h2>
+        <p>I have always been inspired by the world of anime. Each piece of fanart tells a story, and I love capturing those moments in my projects. The colors, themes, and emotions reflect the creativity that drives me.</p>
+        <p>As a developer, I aim to bring that same energy into my work—blending functionality with artistic design. This portfolio represents my journey through both worlds.</p>
+        <div class="story-images">
+            <img src="photo1.jpg" alt="Anime Fanart 1">
+            <img src="photo2.jpg" alt="Anime Fanart 2">
+            <img src="photo3.jpg" alt="Anime Fanart 3">
+        </div>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>About Me</h2>
+        <p>I’m Alice, a creative developer and anime enthusiast, merging technology with art. Reach out to me!</p>
+        <div class="contact-buttons">
+            <button class="whatsapp" onclick="location.href='https://wa.me/79789819744'">WhatsApp: +7 978 981-97-44</button>
+            <button class="email" onclick="location.href='mailto:lou.nebulis.ix.aliceliese@proton.me'">Email Me</button>
+        </div>
+    </section>
+
+    <section id="skills" style="display: none;">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-label">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="yellow" data-percent="90%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>CSS</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar"><div class="green" data-percent="80%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>JavaScript</span>
+                    <span>70%</span>
+                </div>
+                <div class="skill-bar"><div class="blue" data-percent="70%"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-label">
+                    <span>Python</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar"><div class="red" data-percent="75%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-glow">&copy; 2024 Alice's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function navigateTo(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+
+            if (sectionId === 'skills') {
+                document.querySelectorAll('.skill-bar div').forEach(bar => {
+                    const percent = bar.getAttribute('data-percent');
+                    bar.style.width = percent;
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
