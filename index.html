@@ -22,17 +22,19 @@
         }
 
         nav {
+            position: fixed;
+            top: 10px;
+            left: 10px;
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 15px 0;
+            flex-direction: column;
+            gap: 10px;
         }
 
         nav button {
-            padding: 10px 20px;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
         }
 
@@ -80,30 +82,32 @@
             overflow: hidden;
             height: 20px;
             margin-top: 5px;
+            position: relative;
         }
 
         .skill-bar div {
             height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            transition: width 2s ease;
         }
 
         .yellow {
             background-color: yellow;
-            width: 90%;
         }
 
         .green {
             background-color: green;
-            width: 80%;
         }
 
         .blue {
             background-color: blue;
-            width: 70%;
         }
 
         .red {
             background-color: red;
-            width: 75%;
         }
 
         footer {
@@ -111,6 +115,7 @@
             padding: 10px;
             background-color: #1c1c1c;
             color: white;
+            text-align: center;
         }
 
         .contact-buttons button {
@@ -184,34 +189,34 @@
                     <span>HTML</span>
                     <span>90%</span>
                 </div>
-                <div class="skill-bar"><div class="yellow"></div></div>
+                <div class="skill-bar"><div class="yellow" data-percent="90%"></div></div>
             </div>
             <div class="skill">
                 <div class="skill-label">
                     <span>CSS</span>
                     <span>80%</span>
                 </div>
-                <div class="skill-bar"><div class="green"></div></div>
+                <div class="skill-bar"><div class="green" data-percent="80%"></div></div>
             </div>
             <div class="skill">
                 <div class="skill-label">
                     <span>JavaScript</span>
                     <span>70%</span>
                 </div>
-                <div class="skill-bar"><div class="blue"></div></div>
+                <div class="skill-bar"><div class="blue" data-percent="70%"></div></div>
             </div>
             <div class="skill">
                 <div class="skill-label">
                     <span>Python</span>
                     <span>75%</span>
                 </div>
-                <div class="skill-bar"><div class="red"></div></div>
+                <div class="skill-bar"><div class="red" data-percent="75%"></div></div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Contact me on WhatsApp or Email for more information!</p>
+        <p>&copy; 2024 Alice's Portfolio. All rights reserved.</p>
     </footer>
 
     <script>
@@ -219,6 +224,13 @@
             document.querySelectorAll('section').forEach(section => {
                 section.style.display = section.id === sectionId ? 'block' : 'none';
             });
+
+            if (sectionId === 'skills') {
+                document.querySelectorAll('.skill-bar div').forEach(bar => {
+                    const percent = bar.getAttribute('data-percent');
+                    bar.style.width = percent;
+                });
+            }
         }
     </script>
 </body>
