@@ -8,26 +8,45 @@
 </head>
 <body>
     <header>
-        <div class="profile">
-            <img src="Author.jpg" alt="Alice's Profile Photo" class="profile-photo">
-            <h1>Alice</h1>
-        </div>
-        <nav>
+        <div class="nav-bar">
             <button class="btn home-btn" onclick="showSection('home')">Home</button>
             <button class="btn about-btn" onclick="showSection('about')">About</button>
             <button class="btn skills-btn" onclick="showSection('skills')">Skills</button>
-        </nav>
+        </div>
+        <div class="profile">
+            <h1 id="animated-intro">Hi, I am Alice!</h1>
+            <img src="Author.jpg" alt="Alice's Profile Photo" class="profile-photo">
+        </div>
     </header>
     
     <main>
         <section id="home" class="section">
             <h2>Welcome!</h2>
-            <p>Alice's story about anime fanart goes here. A creative space to share art and inspiration!</p>
+            <p>
+                Anime is more than just a medium it’s a gateway to worlds filled with creativity, emotion, and profound storytelling. 
+                From breathtaking visuals to intricate character arcs, it has a magical way of connecting with its audience.
+            </p>
+            <p>
+                As a fanartist, I explore these worlds through art, capturing moments, emotions, and characters that inspire me. 
+                It’s an amazing journey that merges passion for anime and creativity into something truly special!
+            </p>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Anime Artwork 1" class="gallery-img">
+                <img src="photo2.jpg" alt="Anime Artwork 2" class="gallery-img">
+                <img src="photo3.jpg" alt="Anime Artwork 3" class="gallery-img">
+            </div>
         </section>
         
         <section id="about" class="section hidden">
             <h2>About Me</h2>
-            <p>Hi, I'm Alice, an anime enthusiast and a passionate coder. Let's connect!</p>
+            <p>
+                Hi, I'm Alice, a programmer and anime enthusiast who loves blending technology and creativity. 
+                I believe coding is a powerful art form, much like drawing or storytelling, where lines of code shape worlds of functionality and design.
+            </p>
+            <p>
+                My motivation comes from the joy of solving problems and building tools that make life easier. 
+                Just like the heroes in anime, persistence and innovation are my driving forces as a programmer.
+            </p>
             <button class="btn whatsapp-btn">Contact: +7 978 981-97-44</button>
             <button class="btn email-btn">Email: lou.nebulis.ix.aliceliese@proton.me</button>
         </section>
@@ -62,6 +81,19 @@
             document.querySelectorAll('.section').forEach(section => section.classList.add('hidden'));
             document.getElementById(sectionId).classList.remove('hidden');
         }
+
+        // Typewriter Animation for Self-Introduction
+        const introText = "Hi, I am Alice!";
+        const introElement = document.getElementById("animated-intro");
+        let index = 0;
+        function typeWriter() {
+            if (index < introText.length) {
+                introElement.textContent += introText.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
     </script>
 </body>
 </html>
