@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+  background-color: #ff6f61;
+  color: white;
+}
+
+#about, #photos, #contact {
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.photo-gallery img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.logos img {
+  width: 50px;
+  margin: 10px;
+}
