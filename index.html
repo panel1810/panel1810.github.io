@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="white-button" onclick="navigateTo('home')">Home</button>
+        <button class="red-button" onclick="navigateTo('about')">About</button>
+        <button class="blue-button" onclick="navigateTo('skills')">Skills</button>
+    </header>
+
+    <main id="home">
+        <div class="intro">
+            <img src="Author.jpg/150" alt="Profile Photo" class="profile-photo">
+            <h1 id="name"></h1>
+        </div>
+    </main>
+
+    <main id="about" class="hidden">
+        <h2>About Me</h2>
+        <p>I am a beginner programmer who wants to know a lot about coding.</p>
+        <button class="green-button" onclick="openWhatsApp()">WhatsApp</button>
+        <button class="black-button" onclick="openEmail()">Email</button>
+    </main>
+
+    <main id="skills" class="hidden">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <label>HTML</label>
+            <div class="progress-bar" data-percent="90" style="background-color: red;"></div>
+        </div>
+        <div class="skill">
+            <label>JavaScript</label>
+            <div class="progress-bar" data-percent="80" style="background-color: yellow;"></div>
+        </div>
+        <div class="skill">
+            <label>CSS</label>
+            <div class="progress-bar" data-percent="95" style="background-color: green;"></div>
+        </div>
+        <div class="skill">
+            <label>Python</label>
+            <div class="progress-bar" data-percent="70" style="background-color: blue;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Alice 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
