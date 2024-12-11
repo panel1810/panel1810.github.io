@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.intro {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.skills {
+    margin: 20px 0;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+.progress {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #76c7c0;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #76c7c0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5ba8a0;
+}
