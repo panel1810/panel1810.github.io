@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#typewriter {
+  color: red;
+  font-size: 24px;
+}
+
+.portfolio, .about, .contact {
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 300px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
