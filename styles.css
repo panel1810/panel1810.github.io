@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background: linear-gradient(120deg, #f5f5f5, #e0f7fa);
+    color: #2c3e50;
     line-height: 1.6;
 }
 
@@ -23,13 +23,21 @@ header {
 }
 
 nav .btn {
-    margin: 5px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
+    background: transparent;
+    border: 2px solid #1abc9c;
+    color: #1abc9c;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav .btn:hover {
+    background-color: #1abc9c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(26, 188, 156, 0.2);
 }
 
 .home-btn {
@@ -47,20 +55,25 @@ nav .btn {
     color: #fff;
 }
 
-nav .btn:hover {
-    opacity: 0.8;
-}
-
 .main {
     padding: 20px;
 }
 
 .section {
     display: none;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform-origin: top;
 }
 
 .section:not(.hidden) {
     display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.section.hidden {
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 .skill {
@@ -72,6 +85,7 @@ nav .btn:hover {
     background-color: #ddd;
     border-radius: 10px;
     overflow: hidden;
+    animation: fill-bar 2s ease-in-out forwards;
 }
 
 .yellow {
@@ -112,37 +126,25 @@ footer {
     border-radius: 5px;
     margin-top: 10px;
 }
-/* Updated theme with a fresher look */
-body {
-    background: linear-gradient(120deg, #f5f5f5, #e0f7fa);
-    color: #2c3e50;
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Smooth button hover effects */
-nav .btn {
-    transition: all 0.3s ease-in-out;
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-nav .btn:hover {
-    transform: translateY(-2px);
-    background-color: #1abc9c !important;
-    color: #fff !important;
-}
-
-/* Section transition effects */
-.section {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.section.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Progress bar enhancement */
-.progress-bar {
-    animation: fill-bar 2s ease-in-out forwards;
+.image-container img:hover {
+    transform: scale(1.05);
 }
 
 @keyframes fill-bar {
